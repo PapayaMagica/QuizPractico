@@ -1,0 +1,68 @@
+<form [formGroup]="formulario" (ngSubmit)="ValidarDatos()" novalidate>
+    <fieldset>
+        <legend>Formulario de Entrevista</legend>
+        <ul>
+            <li>
+                <label for="Región">Región:</label> <br>
+                <select id="region" formControlName="region" name="region">
+                    <option value="valparaiso">Valparaíso</option>
+                    <option value="metropolitana">Metropolitana</option>
+                    <option value="bio_bio">Bio Bio</option>
+                    <option value="araucania">Araucanía</option>   
+                </select>
+
+            </li>
+
+            <br>
+            <li >
+                <label for="clima">Estado del clima:</label><br>
+
+                <input id="clima" formControlName="clima" type="radio" name="clima" value="0"/>
+                <label for="soleado"> Soleado </label><br>
+
+                <input id="clima" formControlName="clima" type="radio" name="clima" value="1"/>
+                <label for="lluvioso"> Lluvioso </label><br>
+
+                <input id="clima" formControlName="clima" type="radio" name="clima" value="2"/>
+                <label for="nublado"> Nublado </label><br>
+
+                <input id="clima" formControlName="clima"type="radio" name="clima" value="3"/>
+                <label for="tormenta"> Tormenta </label><br>
+            </li>
+
+            <br>
+
+            <li>
+                <label for="Región">Dia:</label> <br>
+                <select id="region" formControlName="dia" name="region">
+                    <option value="lunes">Lunes</option>
+                    <option value="martes">Martes</option>
+                    <option value="miércoles">Miércoles</option>
+                    <option value="jueves">Jueves</option>
+                    <option value="viernes">Viernes</option>
+                    <option value="sábado">Sábado</option>  
+                    <option value="domingo">Domingo</option>     
+                </select>
+            </li>
+            <br>
+            <li>
+                <label for="temperatura">Temperatura: </label> <br>
+                <input id="temperatura" formControlName="temperatura" type="text" /> <br><br>
+            </li>
+
+            <li >
+                <label for="escala">Escala de Temperatura</label><br>
+
+                <input id="escala" formControlName="escala" type="radio" name="escala" value="C"/>
+                <label for="escala"> Celsius </label><br>
+
+                <input id="escala" formControlName="escala" type="radio" name="escala" value="F"/>
+                <label for="escala"> Farenheit </label><br>
+            </li>
+            <br>
+            <button type="submit" [disabled]="formulario.invalid">Actualizar</button>
+
+        </ul>
+    </fieldset>
+
+</form>

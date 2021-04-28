@@ -1,0 +1,32 @@
+<nav>
+    <span id="textoIcono"> <img src="/assets/img/weather.png"> El Clima </span>
+    <span id="localidad">Chile -     </span>
+    <div id="menu">
+        <a [routerLink]="['/']" routerLinkActive="router-link-active">
+            <button mat-button>
+                <span class="inicio">Valparaíso</span>
+            </button>
+        </a>
+
+        <a [routerLink]="['/metropolitana']" routerLinkActive="router-link-active">
+            <button mat-button>
+
+                <span class="inicio">Metropolitana</span>
+            </button>
+        </a>
+
+        <a [routerLink]="['/bio_bio']" routerLinkActive="router-link-active">
+            <button mat-button>
+
+                <span class="inicio">Bio Bio</span>
+            </button>
+        </a>
+
+        <a [routerLink]="['/araucania']" routerLinkActive="router-link-active">
+            <button mat-button>
+
+                <span class="inicio">Araucanía</span>
+            </button>
+        </a>
+    </div>
+</nav>
